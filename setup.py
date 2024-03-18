@@ -1,7 +1,7 @@
 # It is basically like installing requirements file
 # "python setup.py install" and then all libraries needed could be installed 
 
-from setuptools import setup
+from setuptools import setup,find_packages
 from typing import List
 
 
@@ -13,7 +13,6 @@ PROJECT_NAME = "housing-predictor"
 VERSION = "0.0.1"
 AUTHOR ="Siddhant Bedmutha"
 DESCRIPTION = "This is first full stack machine learning project"
-PACKAGES = ["housing"]
 REQUIREMENT_FILE_NAME = "requirements.txt"
 
 
@@ -27,7 +26,7 @@ def get_requirements_list()->List[str]:
     of libraries mentioned in requirements.txt file
     """
     with open(REQUIREMENT_FILE_NAME) as requirement_file :
-        return requirement_file.readlines()
+        return requirement_file.readlines().remove("-e .")
 
 
 
@@ -36,7 +35,7 @@ name= PROJECT_NAME ,# name of the project
 version = VERSION,
 author = AUTHOR,
 description=DESCRIPTION,
-packages=PACKAGES,# here provide the name of folder where all packages are present 
+packages=find_packages(),# return all the folder name where "__init__" and treat them as package
 install_requires = get_requirements_list(),
 
 )
