@@ -106,3 +106,9 @@ To install all the libraries and modules :
 ```
 python setup.py install
 ```
+
+
+Install ipykernel
+```
+pip install ipykernel
+```
