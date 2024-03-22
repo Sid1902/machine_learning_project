@@ -11,7 +11,7 @@ class Pipeline :
      
     def __init__(self,config:Configuration = Configuration()) -> None:
         try:
-            pass
+            self.config = config
 
         except Exception as e :
             raise HousingException(e,sys) from e

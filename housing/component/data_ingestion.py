@@ -14,13 +14,14 @@ class DataIngestion :
             logging.info(f"{'='*20}Data Ingestion log started.{'='*20}")
             # ====================Data Ingestion log started.==================== output of {'='*20}
             self.data_ingestion_config = data_ingestion_config
+            logging.info(f"print : {self.data_ingestion_config}")
         except Exception as e :
             raise HousingException(e,sys) from e 
 
     def download_housing_data(self,) ->str :
         try:
             # extracting remote url to download the dataset
-            download_url = self.data_ingestion_config.dataset_dwonload_url
+            download_url = self.data_ingestion_config.dataset_download_url
 
             # folder location to download file 
             tgz_download_dir = self.data_ingestion_config.tgz_download_dir
@@ -56,7 +57,7 @@ class DataIngestion :
             logging.info(f"Extracting tgz file : {tgz_file_path} into {raw_data_dir}")
 
             with tarfile.open(tgz_file_path) as  housing_tgz_file_obj :
-                housing_tgz_file_obj.extractall(path= raw_data_dir,filter='data')
+                housing_tgz_file_obj.extractall(path= raw_data_dir)
 
             logging.info(f"Extraction Completed")
 
@@ -102,10 +103,12 @@ class DataIngestion :
             
             if strat_train_set is not None :
                 os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
+                logging.info(f"Exporting training datset to file: [{train_file_path}]")
                 strat_train_set.to_csv(train_file_path,index = False)
 
             if strat_test_set is not None :
                 os.makedirs(self.data_ingestion_config.ingested_test_dir,exist_ok=True)
+                logging.info(f"Exporting test dataset to file: [{test_file_path}]")
                 strat_test_set.to_csv(test_file_path,index= False)
 
             data_ingestion_artifact = DataIngestionArtifact(train_file_path=train_file_path,
