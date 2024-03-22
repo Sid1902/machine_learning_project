@@ -11,3 +11,18 @@ class DataIngestion :
             self.data_ingestion_config = data_ingestion_config
         except Exception as e :
             raise HousingException(e,sys) from e 
+
+    def download_housing_data(self,) :
+        pass
+
+    def extract_tgz_file(self,) :
+        pass
+
+    def split_data_as_train_test(self,):
+        pass
+
+    def initiate_data_ingestion(self) -> DataIngestionArtifact:
+        try:
+            pass
+        except Exception as e :
+            raise HousingException(e,sys) from e 
