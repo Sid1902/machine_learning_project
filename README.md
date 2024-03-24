@@ -112,3 +112,19 @@ Install ipykernel
 ```
 pip install ipykernel
 ```
+
+
+Data Drift : 
+Data drift refers to changes in the distribution of the features an ML model receives in production, potentially causing a decline in model performance.
+
+When your dataset stats gets change we call it as data drift.
+
+
+
+MLops :
+MLOps stands for Machine Learning Operations. MLOps is a core function of Machine Learning engineering, focused on streamlining the process of taking machine learning models to production, and then maintaining and monitoring them. MLOps is a collaborative function, often comprising data scientists, devops engineers, and IT.
+
+
+Null Hypothesis : Two datsets are from same distribution
+
+alternate Hypothesis : Two datsets are not from same distribution
