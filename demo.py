@@ -6,7 +6,7 @@ from housing.config.configuration import Configuration
 
 def main( ):
     try: 
-        # data_validation_config = Configuration().get_data_validation_config()
+        # data_validation_config = Configuration().get_data_transformation_config()
         # print(data_validation_config)
         pipeline = Pipeline()
         pipeline.run_pipeline()

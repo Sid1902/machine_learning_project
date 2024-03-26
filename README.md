@@ -128,3 +128,11 @@ MLOps stands for Machine Learning Operations. MLOps is a core function of Machin
 Null Hypothesis : Two datsets are from same distribution
 
 alternate Hypothesis : Two datsets are not from same distribution
+
+while re-training our dataset we compared the old and new dataset for their distribution.
+
+
+Google MLops Docs :
+```
+https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning
+```

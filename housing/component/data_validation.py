@@ -10,11 +10,14 @@ from evidently.dashboard.tabs import DataDriftTab
 import pandas as pd
 import json
 
+
+
 class DataValidation :
 
     def __init__(self,data_validation_config : DataValidationConfig,
         data_ingestion_artifact: DataIngestionArtifact):
         try:
+            logging.info(f"{'='*20} Data Validation log started. {'=' * 20}")
             self.data_validation_config = data_validation_config
             logging.info(f"print {self.data_validation_config}")
             self.data_ingestion_artifact = data_ingestion_artifact
@@ -106,20 +109,20 @@ class DataValidation :
 
     def save_data_drift_report_page(self):
         try:
-
+            
             dashboard = Dashboard(tabs=[DataDriftTab()])
 
             train_df,test_df = self.get_train_and_test_df()
 
             dashboard.calculate(train_df,test_df)
 
-            report_page_file_apth = self.data_validation_config.report_page_file_path
+            report_page_file_path = self.data_validation_config.report_page_file_path
 
-            report_page_dir = os.path.dirname(report_page_file_apth)
+            report_page_dir = os.path.dirname(report_page_file_path)
 
             os.makedirs(report_page_dir,exist_ok=True)
 
-            dashboard.save(report_page_file_apth)
+            dashboard.save(report_page_file_path)
 
 
             
@@ -164,3 +167,13 @@ class DataValidation :
 
         except Exception as e:
             raise HousingException(e,sys) from e 
+        
+
+    def __del__(self):
+        """
+        This code ensures that whenever an object of this class is garbage collected, an informational log message is printed, indicating that the data ingestion process (presumably managed by this class) has been completed
+        
+        """
+        logging.info(f"{'='*20}Data Validation log completed.{'='*20}\n\n")
+
+
