@@ -16,7 +16,7 @@ DataTransformationConfig = namedtuple("DataTransformationConfig",[
 ])
 
 ModelTrainingConfig = namedtuple("ModelTrainingConfig",
-["trained_model_file_path","base_accuracy"])
+["trained_model_file_path","base_accuracy","model_config_file_path"])
 
 
 ModelEvaluationConfig = namedtuple("ModelEvaluationConfig",["model_evaluaiton_file_path","time_stamp"])
