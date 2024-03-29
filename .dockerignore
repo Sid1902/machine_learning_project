@@ -4,3 +4,4 @@ venv/
 *.png
 flow_diagrams/
 notebook/
+housing/artifact/

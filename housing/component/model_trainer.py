@@ -133,7 +133,7 @@ class ModelTrainer:
             raise HousingException(e,sys) from e 
         
     def __del__(self):
-        logging.info(f"{'>>' * 30}Model trainer log completed.{'<<' * 30} ")
+        logging.info(f"{'>>' * 30}Model trainer log completed.{'<<' * 30} \n \n")
 
 
 #loading transformed training and testing datset

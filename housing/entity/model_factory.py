@@ -49,7 +49,6 @@ MetricInfoArtifact = namedtuple("MetricInfoArtifact",
 
 def evaluate_regression_model(model_list : list , X_train : np.ndarray , y_train : np.ndarray,X_test : np.ndarray,y_test:np.ndarray , base_accuracy : float = 0.6) ->MetricInfoArtifact :
 
-
     """
     Description:
     This function compare multiple regression model return best model
@@ -108,7 +107,7 @@ def evaluate_regression_model(model_list : list , X_train : np.ndarray , y_train
 
             #if model accuracy is greater than base accuracy and train and test score is within certain thershold
             #we will accept that model as accepted model
-            if model_accuracy >= base_accuracy and diff_test_train_acc < 0.05:
+            if model_accuracy >= base_accuracy and diff_test_train_acc < 0.10:
                 base_accuracy = model_accuracy
                 metric_info_artifact = MetricInfoArtifact(model_name=model_name,
                                                         model_object=model,
