@@ -3,7 +3,7 @@ This is first machine learning project
 
 ## start the machine learning project
 Application url : 
-[CA Price Trends] (https://ml-regression-testing-5830297bf57b.herokuapp.com/)
+[CA Price Trends](https://ml-regression-testing-5830297bf57b.herokuapp.com/)
 
 creating conda environment
 
