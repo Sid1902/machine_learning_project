@@ -1,5 +1,5 @@
 best_model:
-  model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-01-43-31\trained_model\model.pkl
+  model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-21-38-24\trained_model\model.pkl
 history:
   2024-03-29-21-13-20:
     model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-29-20-30-55\trained_model\model.pkl
@@ -7,3 +7,23 @@ history:
     model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-29-21-13-20\trained_model\model.pkl
   2024-03-31-01-43-31:
     model_path: e:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-01-26-28\trained_model\model.pkl
+  2024-03-31-20-20-21:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-01-43-31\trained_model\model.pkl
+  2024-03-31-20-21-27:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-20-20-21\trained_model\model.pkl
+  2024-03-31-20-29-12:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-20-21-27\trained_model\model.pkl
+  2024-03-31-20-30-21:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-20-29-12\trained_model\model.pkl
+  2024-03-31-20-43-08:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-20-30-21\trained_model\model.pkl
+  2024-03-31-21-15-17:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-20-43-08\trained_model\model.pkl
+  2024-03-31-21-20-52:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-21-15-17\trained_model\model.pkl
+  2024-03-31-21-26-17:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-21-20-52\trained_model\model.pkl
+  2024-03-31-21-27-22:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-21-26-17\trained_model\model.pkl
+  2024-03-31-21-38-24:
+    model_path: E:\machine_learning_project\machine_learning_project\housing\artifact\model_trainer\2024-03-31-21-27-22\trained_model\model.pkl

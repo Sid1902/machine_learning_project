@@ -47,6 +47,7 @@ class Pipeline (Thread):
         try:
             os.makedirs(config.training_pipeline_config.artifact_dir,exist_ok=True)
             Pipeline.experiment_file_path = os.path.join(config.training_pipeline_config.artifact_dir,EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME)
+            logging.info(f"experiment file path : {Pipeline.experiment_file_path}")
 
             #  required for thread
             super().__init__(daemon=False, name="pipeline")
@@ -231,12 +232,13 @@ class Pipeline (Thread):
             raise HousingException(e,sys) from e 
         
     @classmethod
-    def get_experiment_status(cls,limit : int = 5)-> pd.DataFrame :
+    def get_experiments_status(cls,limit : int = 5)-> pd.DataFrame :
         """"
         this function returns the  latest 5 experiment logs
         """
         try:
             if os.path.exists(Pipeline.experiment_file_path) :
+                logging.info(f"Experiment file path {Pipeline.experiment_file_path}")
                 df = pd.read_csv(Pipeline.experiment_file_path)
                 limit = -1 *int(limit)
                 return df[limit :].drop(columns=["experiment_file_path", "initialization_timestamp"],axis=1)
