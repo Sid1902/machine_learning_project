@@ -45,7 +45,7 @@ class ModelPusher :
 
     def initiate_model_pusher(self) -> ModelPusherArtifact :
         try :
-            pass
+            return self.export_model()
         except Exception as e:
             raise HousingException(e,sys) from e 
         

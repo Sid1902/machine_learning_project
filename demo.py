@@ -1,15 +1,15 @@
 from housing.pipeline.pipeline import Pipeline
 from housing.exception import HousingException
 from housing.logger import logging
-
+import os
 from housing.config.configuration import Configuration
 
 def main( ):
     try: 
-        # data_validation_config = Configuration().get_data_transformation_config()
-        # print(data_validation_config)
-        pipeline = Pipeline()
-        pipeline.run_pipeline()
+        config_path = os.path.join("config","config.yaml")
+        pipeline = Pipeline(Configuration(config_path))
+        pipeline.start()
+        logging.info("Main function execution completed")
     
     except Exception as e:
         logging.error(f"{e}")
