@@ -136,3 +136,13 @@ Google MLops Docs :
 ```
 https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning
 ```
+
+"""A main.yaml file can serve as a central location to store various 
+configuration settings for your project. This can include:
+Training and testing parameters for machine learning models 
+(e.g., learning rate, batch size, epochs)
+Data paths for training, validation, and testing sets Hyperparameter tuning 
+options Logging and debugging parameters.
+By keeping these configurations in a separate YAML file, you improve code 
+readability, maintainability, and the ability to experiment with different 
+configurations easily."""
